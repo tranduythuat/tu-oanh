@@ -1,0 +1,111 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invite01 {
+    width: 100%;
+    .content {
+        width: 100%;
+        font-size: 14px;
+        font-family: $font-ICIELBCOLDSTYLE;
+        padding-top: 9%;
+        .box-logo {
+            position: relative;
+            margin-bottom: 10%;
+            @include flex-center;
+            img.frame {
+                max-width: 200px;
+                width: 100%;
+                height: auto;
+            }
+            img.logo {
+                position: absolute;
+                max-width: 38px;
+                width: 100%;
+                height: auto;
+                top: 50%;
+                transform: translateY(-40%);
+            }
+        }
+        .intro {
+            text-transform: uppercase;
+            line-height: 1.8;
+        }
+
+        .datetime-row {
+            font-size: 30px;
+            text-transform: uppercase;
+            margin-top: 10%;
+        }
+        .lunar {
+            text-transform: uppercase;
+            margin-top: 1%;
+        }
+
+        .divider {
+            margin: 15% 0;
+            img {
+                max-width: 81px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .location-label {
+            text-transform: uppercase;
+            margin-bottom: 5%;
+        }
+        .venue-name {
+            font-family: $font-UVNBUCTHU;
+            font-size: 58px;
+            line-height: 1.2;
+            margin-bottom: 5%;
+        }
+        .address {
+            margin-bottom: 4%;
+        }
+        .map-btn {
+            display: block;
+            font-family: $font-ICIELBCOLDSTYLE;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $text-color;
+            font-size: 14.8px;
+            border: 2px solid $text-color;
+            border-radius: 15px;
+            width: 277px;
+            margin: 0 auto;
+            padding: 1%;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            font-size: calc((14 / 500) * 100vw);
+
+            .box-logo {
+                img.frame {
+                    max-width: calc((200 / 500) * 100vw);
+                }
+                img.logo {
+                    max-width: calc((38 / 500) * 100vw);
+                }
+            }
+    
+            .datetime-row {
+                font-size: calc((30 / 500) * 100vw);
+            }
+    
+            .divider {
+                img {
+                    max-width: calc((81 / 500) * 100vw);
+                }
+            }
+            .venue-name {
+                font-size: calc((58 / 500) * 100vw);
+            }
+            .map-btn {
+                font-size: calc((14.8 / 500) * 100vw);
+                width: calc((277 / 500) * 100vw);
+            }
+        }
+    }
+}

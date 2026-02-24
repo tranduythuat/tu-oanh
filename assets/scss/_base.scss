@@ -1,0 +1,125 @@
+@use "variables" as *;
+@use "mixins" as *;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-size: 12px;
+    margin: 0;
+    overflow-x: hidden;
+    @include flex-center;
+}
+
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container {
+    max-width: 500px;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    box-shadow: $shadow-default;
+    color: $text-color;
+    // background-image: url('../../assets/images/base_bg_01.jpg');
+    background-image: url('../../assets/images/base_bg_01.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* music */
+.music-box {
+    display: flex;
+    position: fixed;
+    bottom: 10px;
+    right: 1%;
+    .label {
+        @include flex-center;
+        position: relative;
+        width: 90px;
+
+        span {
+            position: absolute;
+            right: -20%;
+            width: 100%;
+            font-family: $font-lora;
+            font-size: 12px;
+            background-color: rgb(138, 121, 89);
+            color: antiquewhite;
+            padding: 3% 0% 3% 20%;
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            opacity: .9;
+        }
+    }
+    .player {
+        max-width: 55px;
+        width: 100%;
+        aspect-ratio: 1;
+        z-index: 9999;
+        @include flex-center;
+    }
+}
+// .player {
+//     position: fixed;
+//     bottom: 10px;
+//     right: 1%;
+//     max-width: 55px;
+//     width: 100%;
+//     aspect-ratio: 1;
+//     border-radius: 50%;
+//     cursor: pointer;
+//     background-color: transparent;
+//     border: none;
+//     outline: none;
+//     z-index: 9999;
+//     border: 1px solid var(--text-title-color);
+// }
+
+.player #iconSvg {
+    width: 100%;
+    height: 100%;
+    fill: var(--text-title-color);
+}
+
+
+@media (max-width: 500px) {
+    .music-box {
+        bottom: calc((10 / 500) * 100vw);
+        .label {
+            width: calc((90 / 500) * 100vw);
+            span {
+                font-size: calc((12 / 500) * 100vw);
+            }
+        }
+        .player {
+            max-width: calc((55 / 500) * 100vw);
+        }
+    }
+}
+
+.spin {
+    animation: spin 4s linear infinite;
+}
+
+/* Định nghĩa hoạt ảnh xoay */
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}

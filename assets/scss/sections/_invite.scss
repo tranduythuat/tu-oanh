@@ -1,0 +1,83 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.invite {
+    width: 100%;
+    .content {
+        width: 100%;
+        background: url('../../assets/images/invite_bg.png');
+        background-repeat: no-repeat;
+        background-size: 95%;
+        background-position: center;
+        aspect-ratio: 500 / 974;
+        display: flex;
+        justify-content: start;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font-ICIELBCOLDSTYLE;
+        font-size: 12px;
+        padding-top: 35%;
+
+        .parents-info {
+            width: 90%;
+            display: flex;
+            justify-content: space-around;
+            .parent-block {
+                .label, .name {
+                    text-transform: uppercase;
+                }
+                .address {
+                    margin-top: 5%;
+                }
+            }
+        }
+
+        .announcement, .ceremony-label, .lunar-date {
+            text-transform: uppercase;
+        }
+
+        .announcement {
+            margin: 11% 0 15%;
+        }
+
+        .role-text {
+            margin-top: 1%;
+        }
+
+        .groom-name, .bride-name {
+            font-size: 40px;
+            font-family: $font-UVNBUCTHU;
+        }
+
+        .divider {
+            margin: 12% 0;
+            img {
+                max-width: 94px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .datetime {
+            font-size: 40px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            font-size: calc((12 / 500) * 100vw);
+            
+            .groom-name, .bride-name {
+                font-size: calc((40 / 500) * 100vw);
+            }
+    
+            .divider {
+                img {
+                    max-width: calc((94 / 500) * 100vw);
+                }
+            }
+            .datetime {
+                font-size: calc((40 / 500) * 100vw);
+            }
+        }
+    }
+}

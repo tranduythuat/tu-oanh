@@ -1,0 +1,71 @@
+
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.our-story {
+    width: 100%;
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 1057;
+        background: url('../../assets/images/ourstory_bg_bottom.png') no-repeat bottom / contain, 
+                    url('https://pub-d341ea7ec201435598469d75d8c4a056.r2.dev/han-ngoc/_DSC0483.webp') no-repeat top / contain;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-direction: column;
+        font-family: $font-1FTV-VIP-Qerginas;
+
+        .text-main {
+            position: relative;
+            font-size: 11px;
+            width: 100%;
+            max-width: 399px;
+            aspect-ratio: 399 / 372;
+            background: url('../../assets/images/ourstory_flower_bg.png') no-repeat center / cover, url('../../assets/images/ourstory_text_bg.png') no-repeat center / cover;
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            text-align: left;
+            padding: 0 4%;
+            .wax_seal {
+                max-width: 90px;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                transform: translate(-50%,-50%);
+            }
+            
+            .item {
+                text-align: justify;
+                margin-bottom: 4%;
+                line-height: 1.2;
+            }
+        }
+        .sub-text {
+            margin: 4% 0;
+            img {
+                max-width: 131px;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .content {
+            .text-main {
+                font-size: calc((11 / 500) * 100vw);
+                max-width: calc((399 / 500) * 100vw);
+                .wax_seal {
+                    max-width: calc((90 / 500) * 100vw);
+                }
+            }
+            .sub-text {
+                img {
+                    max-width: calc((131 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

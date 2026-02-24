@@ -1,0 +1,69 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+
+.album {
+    width: 100%;
+    .content {
+        width: 100%;
+        background-color: $primary-color;
+        h2 {
+            font-family: $font-Bellamy-Stevenson;
+            font-size: 54px;
+            font-weight: 300;
+            color: $text-color;
+            margin: 5% 0 7%
+        }
+
+        .swiper {
+            width: 100%;
+            aspect-ratio: 500 / 730;
+            margin: 0 auto;
+        
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            .swiper-button-next,
+            .swiper-button-prev {
+                color: white;
+            }
+
+            .swiper-pagination-bullet-active {
+                background: rgb(215, 215, 215);
+            }
+
+            .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+
+            h2 {
+                font-size: calc((54 / 500) * 100vw);
+            }
+            .swiper {
+                .swiper-button-next:after, 
+                .swiper-button-prev:after {
+                    font-size: calc((44 / 500) * 100vw);
+                }
+
+                .swiper-pagination-bullet {
+                    width: calc((16 / 500) * 100vw);
+                    height: calc((16 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}
+
+.swiper {
+    margin: 0 auto;
+    // padding: 0 0 10% !important;
+}

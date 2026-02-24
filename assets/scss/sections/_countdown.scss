@@ -1,0 +1,94 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.countdown {
+    .content {
+        width: 100%;
+        @include flex-center;
+        flex-direction: column;
+        padding-bottom: 10%;
+        background: url('../../assets/images/flower_bg_bottom_bg.png') no-repeat;
+        background-size: 100% auto;
+        background-position: center 85%;
+        .divider {
+            margin: 2% 0 6%;
+            perspective: 1000px;
+            img {
+                max-width: 132px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .title {
+            font-family: $font-UVNKeChuyen3;
+            font-size: 46px;
+            font-weight: 300;
+            margin-bottom: 5%;
+        }
+
+        .countdown-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
+            width: 80%;
+    
+            .time-box {
+                text-align: center;
+                flex: 1;
+                .number {
+                    font-family: $font-BlushingRose;
+                    font-size: 55px;
+                    font-weight: 100;
+                    line-height: 1;
+                    margin-bottom: 5%;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                }
+        
+                .label {
+                    font-size: 13px;
+                    color: #a1887f;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    font-weight: 500;
+                }
+                &:not(:last-child) {
+                    .number {
+                        position: relative;
+
+                        &::after {
+                            content: ":";
+                            position: absolute;
+                            right: -3%
+                        }
+                    }
+                }
+            }
+    
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .divider {
+                img {
+                    max-width: calc((132 / 500) * 100vw);
+                }
+            }
+            .title {
+                font-size: calc((46 / 500) * 100vw);
+            }
+    
+            .countdown-box {
+                .time-box {
+                    .number {
+                        font-size: calc((55 / 500) * 100vw);
+                    }
+                }
+        
+            }
+        }
+    }
+}

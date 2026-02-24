@@ -1,0 +1,106 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.timeline {
+    width: 100%;
+    .content {
+        width: 100%;
+        background: url('../../assets/images/timeline_bg_flower_optimized.png') no-repeat center / 100%;
+        aspect-ratio: 500 / 1288;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        font-family: $font-ICIELBCOLDSTYLE;
+        font-size: 14px;
+        position: relative;
+        .cover-bg {
+            position: absolute;
+            max-width: 393px;
+            width: 100%;
+            height: auto;
+            z-index: 10;
+        }
+        .divider {
+            z-index: 20;
+            img {
+                max-width: 87px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .title {
+            font-family: $font-UVNBUCTHU;
+            font-size: 50px;
+            font-weight: 300;
+            margin-top: 3%;
+            z-index: 20;
+        }
+
+        .items {
+            z-index: 20;
+            margin-top: 8%;
+            width: 100%;
+            .item {
+                margin-bottom: 7%;
+                .icon {
+                    @include flex-center;
+                    margin-bottom: 1%;
+                    img {
+                        max-width: 32px;
+                        width: 100%;
+                        height: auto
+                    }
+                }
+                .time {
+                    letter-spacing: 1.5px;
+                    @include flex-center;
+                }
+            }
+            #rings-icon {
+                max-width: 40px;
+            }
+            #mic-icon {
+                max-width: 20px;
+            }
+        }
+    }
+    
+   
+
+    @media (max-width: 500px) {
+        .content {
+            font-size: calc((14 / 500) * 100vw);
+            .cover-bg {
+                max-width: calc((393 / 500) * 100vw);
+            }
+
+            .divider {
+                img {
+                    max-width: calc((87 / 500) * 100vw);
+                }
+            }
+            .title {
+                font-size: calc((50 / 500) * 100vw);
+            }
+            .items {
+                .item {
+                    .icon {
+                        img {
+                            max-width: calc((32 / 500) * 100vw);
+                        }
+                    }
+                    .time {
+                        letter-spacing: calc((1.5 / 500) * 100vw);
+                    }
+                }
+                #rings-icon {
+                    max-width: calc((40 / 500) * 100vw);
+                }
+                #mic-icon {
+                    max-width: calc((20 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

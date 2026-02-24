@@ -1,0 +1,78 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.letter-section {
+    width: 100%;
+    max-width: 500px;
+    .content {
+        width: 100%;
+        aspect-ratio: 500 / 950;
+        background: url('../../assets/images/letter_bg.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: $text-color;
+        font-family: $font-ICIELBCOLDSTYLE;
+        box-shadow:  0 10px 20px rgba(0, 0, 0, 0.439);
+        position: relative;
+        cursor: pointer;
+        perspective: 1000px;
+
+        .names {
+            margin-bottom: 4%;
+            font-size: 40px;
+            font-family: $font-UVNBUCTHU;
+            text-align: center;
+        }
+
+        .letter-img {
+            position: relative;
+            cursor: pointer;
+            img {
+                max-width: 443px;
+                width: 100%;
+                height: auto;
+            }
+            .open-letter {
+                position: absolute;
+                left: 45%;
+                bottom: 16%;
+                font-size: 11.4px;
+            }
+        }
+
+        .info {
+            .date {
+                font-size: 23px;
+                margin-top: 1%;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .names {
+                font-size: calc((40 / 500) * 100vw);
+            }
+    
+            .letter-img {
+                img {
+                    max-width: calc((443 / 500) * 100vw);
+                }
+                .open-letter {
+                    font-size: calc((11.4 / 500) * 100vw);
+                }
+            }
+    
+            .info {
+                .date {
+                    font-size: calc((23 / 500) * 100vw);
+                }
+            }
+        }
+    }
+}

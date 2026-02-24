@@ -1,0 +1,68 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+.upload {
+    width: 100%;
+    .content {
+        padding: 10% 0;
+        width: 100%;
+        background-color: $primary-color;
+        perspective: 1000px;
+        .divider {
+            margin-bottom: 5%;
+            img {
+                max-width: 15px;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .subtext {
+            font-size: 16px;
+            font-family: $font-ICIELBCOLDSTYLE;
+            margin-bottom: 5%;
+        }
+        .upload-btn {
+            font-family: inherit;
+            display: block;
+            width: 40%;
+            padding: 1.5% 0 1%;
+            background-color: $text-color;
+            color: white;
+            border: none;
+            font-size: 12px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin: 0 auto;
+            margin-bottom: 10%;
+        }
+        .small-note {
+            font-family: $font-ICIELBCOLDSTYLE;
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 500px) {
+        .content {
+            .divider {
+                img {
+                    max-width: calc((15 / 500) * 100vw);
+                }
+            }
+            .subtext {
+                font-size: calc((16 / 500) * 100vw);
+            }
+            .upload-btn {
+                font-size: calc((12 / 500) * 100vw);
+                letter-spacing: calc((1 / 500) * 100vw);
+            }
+
+            .small-note {
+                font-size: calc((12 / 500) * 100vw);
+            }
+        }
+    }
+}
