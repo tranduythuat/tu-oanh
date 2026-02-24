@@ -43,6 +43,12 @@
                 bottom: 16%;
                 font-size: 11.4px;
             }
+            .open-letter-en {
+                position: absolute;
+                left: 41.5%;
+                bottom: 16%;
+                font-size: 11.4px;
+            }
         }
 
         .info {
@@ -63,7 +69,7 @@
                 img {
                     max-width: calc((443 / 500) * 100vw);
                 }
-                .open-letter {
+                .open-lette, .open-letter-en {
                     font-size: calc((11.4 / 500) * 100vw);
                 }
             }

@@ -1277,6 +1277,12 @@ header {
   bottom: 16%;
   font-size: 11.4px;
 }
+.letter-section .content .letter-img .open-letter-en {
+  position: absolute;
+  left: 41.5%;
+  bottom: 16%;
+  font-size: 11.4px;
+}
 .letter-section .content .info .date {
   font-size: 23px;
   margin-top: 1%;
@@ -1288,7 +1294,7 @@ header {
   .letter-section .content .letter-img img {
     max-width: 88.6vw;
   }
-  .letter-section .content .letter-img .open-letter {
+  .letter-section .content .letter-img .open-lette, .letter-section .content .letter-img .open-letter-en {
     font-size: 2.28vw;
   }
   .letter-section .content .info .date {
