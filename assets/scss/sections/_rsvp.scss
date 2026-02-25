@@ -63,7 +63,7 @@
                 .radio-label {
                     font-size: 9.6px;
                     text-transform: uppercase;
-                    font-family: inherit;
+                    font-family: $font-ICIELBCOLDSTYLE;
                     display: block;
                     padding: 4%;
                     line-height: 1;
@@ -91,7 +91,7 @@
                 input[type="text"],
                 input[type="number"],
                 textarea {
-                    font-family: $font-lora;
+                    font-family: $font-ICIELBCOLDSTYLE;
                     color: $text-color;
                     width: 100%;
                     padding: 1.6% 4%;
@@ -180,7 +180,7 @@
             }
 
             .submit-btn {
-                font-family: inherit;
+                font-family: $font-ICIELBCOLDSTYLE;
                 width: 33%;
                 padding: 2%;
                 line-height: 1;
