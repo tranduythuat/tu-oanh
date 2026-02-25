@@ -651,7 +651,6 @@ header {
 .dresscode .content {
   width: 100%;
   perspective: 1000px;
-  background: url("../../assets/images/flower_bg_02.png") no-repeat right 20%/45%;
   padding-bottom: 17%;
 }
 .dresscode .content h2 {
