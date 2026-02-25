@@ -99,8 +99,8 @@
             "beforeend",
             `
             <div class="btn-group">
-              <button id="btnVi" class="lang-btn">VI</button>
-              <button id="btnEn" class="lang-btn">EN</button>
+              <button id="btnVi" class="lang-btn">Tiếng việt</button>
+              <button id="btnEn" class="lang-btn">English</button>
             </div>
             `
           );
