@@ -7,14 +7,17 @@
         width: 100%;
         perspective: 1000px;
         // background: url('../../assets/images/flower_bg_02.png') no-repeat right 20% / 45%;
-        padding-bottom: 17%;
+        // padding-bottom: 17%;
         h2 {
             font-family: $font-UVNBUCTHU;
             font-size: 50px;
             font-weight: 300;
             margin-top: 7%;
         }
-
+        .subtext {
+            font-size: 16px;
+            font-family: $font-ICIELBCOLDSTYLE;
+        }
         .colors-grid {
             display: flex;
             justify-content: center;
@@ -50,6 +53,10 @@
         .content {
             h2 {
                 font-size: calc((50 / 500) * 100vw);
+            }
+
+            .subtext {
+                font-size: calc((16 / 500) * 100vw);
             }
 
             .colors-grid {
