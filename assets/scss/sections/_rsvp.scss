@@ -3,6 +3,7 @@
 
 .rsvp {
     width: 100%;
+    margin-top: 10%;
     .content {
         width: 100%;
         font-family: $font-ICIELBCOLDSTYLE;
@@ -73,6 +74,7 @@
                     transition: all 0.3s ease;
                     text-align: center;
                     border: 2px solid $text-color;
+                    color: #6e7881;
                     &:hover {
                         background: $text-color;
                         color: white;
@@ -92,12 +94,12 @@
                 input[type="number"],
                 textarea {
                     font-family: $font-ICIELBCOLDSTYLE;
-                    color: $text-color;
+                    color: #6e7881;
                     width: 100%;
                     padding: 1.6% 4%;
                     border-radius: 25px;
                     background: transparent;
-                    font-size: 10px;
+                    font-size: 12px;
                     outline: none;
                     border: 2px solid $text-color;
                     line-height: 1;
@@ -117,9 +119,9 @@
                     font-family: inherit;
                     padding: 4%;
                     text-transform: uppercase;
-                    font-size: 9px;
+                    font-size: 10px;
+                    line-height: 1.2;
                 }
-
 
                 input[type="text"]::placeholder,
                 textarea::placeholder {
@@ -142,20 +144,20 @@
                 }
 
                 .form-select {
-                    font-family: $font-lora;
+                    font-family: inherit;
                     width: 100%;
                     padding: 2% 4%;
-                    border-radius: 8px;
+                    border-radius: 25px;
                     background: transparent;
-                    font-size: 14px;
-                    color: $primary-color;
+                    font-size: 12px;
+                    color: #6e7881;
                     outline: none;
-                    border: 2px solid $primary-color ;
+                    border: 2px solid $text-color ;
                     transition: border-color 0.3s ease;
                     appearance: none;
                     -webkit-appearance: none;
                     -moz-appearance: none;
-                    background-image: url("../../assets/images/chevron_icon.png");
+                    background-image: url("../../assets/images/chevron_icon_blue.png");
                     background-repeat: no-repeat;
                     background-position: right 10px center;
                     background-size: 9px;
@@ -173,6 +175,10 @@
             .form-group.confirm,
             .form-group.gender {
                 margin-bottom: 8%;
+            }
+
+            .form-group.related {
+                margin-top: 5%;
             }
 
             .form-group.guest-gender {

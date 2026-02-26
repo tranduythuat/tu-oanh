@@ -174,7 +174,7 @@
         </div>
       </section>
 
-      <section class="dresscode">
+      <!-- <section class="dresscode">
         <div class="content">
           <h2 class="fade-in">Dresscode</h2>
           <div class="colors-grid">
@@ -192,7 +192,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="rsvp">
         <div class="content">
@@ -206,7 +206,7 @@
                 <img src="assets/images/divider_diamond.png" alt="">
               </div>
               <p class="subtitle" data-animate="fade-in">
-                Kindly RSVP before <strong>April 15th</strong> so that we may prepare and welcome you in the most thoughtful way.
+                Kindly RSVP before <strong>April 1ST</strong> so that we may prepare and welcome you in the most thoughtful way.
               </p>
             </div>
             <div class="divider">
@@ -271,7 +271,23 @@
               />
             </div>
 
-            <div class="form-group fade-in guest-name" data-animate="fade-in">
+            <div class="form-group fade-in guest_number">
+              <select class="form-select" name="guest_number" data-lang="en">
+                <option value="" disabled selected>
+                  How many guests will you attend with?
+                </option>
+                <option value="Just me">Just me</option>
+                <option value="1 guest">1 guest</option>
+                <option value="2 guests">2 guests</option>
+                <option value="3 guests">3 guests</option>
+                <option value="4 guests">4 guests</option>
+                <option value="5 guests">5 guests</option>
+              </select>
+            </div>
+
+            <div id="guest-fields"></div>
+
+            <!-- <div class="form-group fade-in guest-name" data-animate="fade-in">
               <input
                 type="text"
                 id="guest-name"
@@ -288,7 +304,7 @@
                 placeholder="Gender"
                 required
               />
-            </div>
+            </div> -->
             
 
             <!-- <div class="form-group fade-in">
@@ -382,7 +398,7 @@
               <textarea
                 id="message"
                 name="message"
-                placeholder="Please leave your wishes for the bride and groom!"
+                placeholder="Please leave your wishes for the &#10 bride and groom!"
               ></textarea>
             </div>
             <button type="submit" class="submit-btn" data-animate="fade-in">Confirm</button>

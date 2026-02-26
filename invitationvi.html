@@ -174,7 +174,7 @@
         </div>
       </section>
 
-      <section class="dresscode">
+      <!-- <section class="dresscode">
         <div class="content">
           <h2 class="fade-in">Dresscode</h2>
           <div class="colors-grid">
@@ -192,7 +192,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section class="rsvp">
         <div class="content">
@@ -206,7 +206,7 @@
                 <img src="assets/images/divider_diamond.png" alt="">
               </div>
               <p class="subtitle" data-animate="fade-in">
-                Khách mời vui lòng xác nhận tham dự trước ngày <strong>15.04</strong> <br> để chúng mình có thể chuẩn bị chu đáo nhất!
+                Khách mời vui lòng xác nhận tham dự trước ngày <strong>1.4</strong> <br> để chúng mình có thể chuẩn bị chu đáo nhất!
               </p>
             </div>
             <div class="divider">
@@ -271,7 +271,23 @@
               />
             </div>
 
-            <div class="form-group fade-in guest-name" data-animate="fade-in">
+            <div class="form-group fade-in guest_number">
+              <select class="form-select" name="guest_number" data-lang="vi">
+                <option value="" disabled selected>
+                  Bạn sẽ tham dự cùng bao nhiêu người?
+                </option>
+                <option value="Just me">Đi một mình</option>
+                <option value="1 guest">1 người</option>
+                <option value="2 guests">2 người</option>
+                <option value="3 guests">3 người</option>
+                <option value="4 guests">4 người</option>
+                <option value="5 guests">5 người</option>
+              </select>
+            </div>
+
+            <div id="guest-fields"></div>
+
+            <!-- <div class="form-group fade-in guest-name" data-animate="fade-in">
               <input
                 type="text"
                 id="guest-name"
@@ -288,7 +304,7 @@
                 placeholder="Giới tính"
                 required
               />
-            </div>
+            </div> -->
             
 
             <!-- <div class="form-group fade-in">
@@ -299,17 +315,7 @@
               </select>
             </div> -->
 
-            <!-- <div class="form-group fade-in">
-              <select class="form-select" name="guest_number">
-                <option value="" disabled selected>
-                  Bạn sẽ tham dự cùng bao nhiêu người?
-                </option>
-                <option value="Đi một mình">Đi một mình</option>
-                <option value="1 người">1 người</option>
-                <option value="2 người">2 người</option>
-                <option value="3 người">3 người</option>
-              </select>
-            </div> -->
+            
 
             <div class="form-group related">
               <p class="subtitle" data-animate="fade-in">

@@ -890,6 +890,7 @@ header {
 
 .rsvp {
   width: 100%;
+  margin-top: 10%;
 }
 .rsvp .content {
   width: 100%;
@@ -959,6 +960,7 @@ header {
   transition: all 0.3s ease;
   text-align: center;
   border: 2px solid #3c7fc2;
+  color: #6e7881;
 }
 .rsvp .content .rsvp-form .button-group .radio-label:hover {
   background: #3c7fc2;
@@ -975,12 +977,12 @@ header {
 .rsvp .content .rsvp-form .form-group input[type=number],
 .rsvp .content .rsvp-form .form-group textarea {
   font-family: "ICIELBCOLDSTYLE", sans-serif;
-  color: #3c7fc2;
+  color: #6e7881;
   width: 100%;
   padding: 1.6% 4%;
   border-radius: 25px;
   background: transparent;
-  font-size: 10px;
+  font-size: 12px;
   outline: none;
   border: 2px solid #3c7fc2;
   line-height: 1;
@@ -997,7 +999,8 @@ header {
   font-family: inherit;
   padding: 4%;
   text-transform: uppercase;
-  font-size: 9px;
+  font-size: 10px;
+  line-height: 1.2;
 }
 .rsvp .content .rsvp-form .form-group textarea::placeholder {
   white-space: pre-line; /* Cho phép hiển thị xuống dòng trong placeholder */
@@ -1012,20 +1015,20 @@ header {
   margin-bottom: 3%;
 }
 .rsvp .content .rsvp-form .form-group .form-select {
-  font-family: "Lora", sans-serif;
+  font-family: inherit;
   width: 100%;
   padding: 2% 4%;
-  border-radius: 8px;
+  border-radius: 25px;
   background: transparent;
-  font-size: 14px;
-  color: #faf6ee;
+  font-size: 12px;
+  color: #6e7881;
   outline: none;
-  border: 2px solid #faf6ee;
+  border: 2px solid #3c7fc2;
   transition: border-color 0.3s ease;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  background-image: url("../../assets/images/chevron_icon.png");
+  background-image: url("../../assets/images/chevron_icon_blue.png");
   background-repeat: no-repeat;
   background-position: right 10px center;
   background-size: 9px;
@@ -1040,6 +1043,9 @@ header {
 .rsvp .content .rsvp-form .form-group.confirm,
 .rsvp .content .rsvp-form .form-group.gender {
   margin-bottom: 8%;
+}
+.rsvp .content .rsvp-form .form-group.related {
+  margin-top: 5%;
 }
 .rsvp .content .rsvp-form .form-group.guest-gender {
   margin-bottom: 6%;
