@@ -200,7 +200,7 @@
           <!-- <div class="top-img">
             <img src="assets/images/flower_bg_01.png" alt="" />
           </div> -->
-          <form id="rsvpForm" class="rsvp-form">
+          <form id="rsvpForm-vi" class="rsvp-form">
             <div class="header">
               <h2 class="title" data-animate="fade-in">Xác nhận tham dự</h2>
               <div class="divider">
@@ -224,7 +224,7 @@
                     type="radio"
                     id="confirm-yes"
                     name="confirm"
-                    value="Sẽ tham dự"
+                    value="Yes"
                     checked
                   />
                   <label for="confirm-yes" class="radio-label">
@@ -236,7 +236,7 @@
                     type="radio"
                     id="confirm-no"
                     name="confirm"
-                    value="Không tham dự"
+                    value="No"
                   />
                   <label for="confirm-no" class="radio-label">
                     Không tham dự
@@ -277,12 +277,12 @@
                 <option value="" disabled selected>
                   Bạn sẽ tham dự cùng bao nhiêu người?
                 </option>
-                <option value="Just me">Đi một mình</option>
-                <option value="1 guest">1 người</option>
-                <option value="2 guests">2 người</option>
-                <option value="3 guests">3 người</option>
-                <option value="4 guests">4 người</option>
-                <option value="5 guests">5 người</option>
+                <option value="0">Đi một mình</option>
+                <option value="1">1 người</option>
+                <option value="2">2 người</option>
+                <option value="3">3 người</option>
+                <option value="4">4 người</option>
+                <option value="5">5 người</option>
               </select>
             </div>
 
@@ -328,7 +328,7 @@
                     type="radio"
                     id="groom"
                     name="related"
-                    value="Nhà trai"
+                    value="Groom’s guests"
                     checked
                   />
                   <label for="groom" class="radio-label">
@@ -340,7 +340,7 @@
                     type="radio"
                     id="bride"
                     name="related"
-                    value="Nhà gái"
+                    value="Bride’s guests"
                   />
                   <label for="bride" class="radio-label">
                     Nhà gái

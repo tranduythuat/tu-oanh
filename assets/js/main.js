@@ -2,11 +2,6 @@
     "use strict";
 
     /* ======================================================
-         CONSTANTS
-      ====================================================== */
-    const GOOGLE_SCRIPT_URL = "?sheet=confirm";
-
-    /* ======================================================
          HELPERS
       ====================================================== */
     const qs = (selector, parent = document) => parent.querySelector(selector);
@@ -300,12 +295,30 @@
       const {
         name,
         confirm,
+        gender,
         guest_number,
-        relation,
-        dietary,
-        wish,
+        related,
+        vegetarian,
+        message,
       } = data;
-    
+
+      let guestCount = parseInt(data.guest_number) || 0;
+      const guests = [];
+      let guestText = "";
+      for (let i = 1; i <= guestCount; i++) {
+        const guestName = data[`guest_name_${i}`];
+        const guestGender = data[`guest_gender_${i}`];
+        if (guestName) {
+          guests.push(`${i}. ${guestName} (${guestGender})`);
+        }
+      }
+
+      if (guests.length === 0) {
+        guestText = "Just me"
+      } else {
+        guestText = guests.join(" | ");
+      }
+
       // =========================
       // i18n Messages
       // =========================
@@ -331,7 +344,7 @@
           errorRetry: "Try again",
         },
       };
-    
+
       const t = messages[lang] || messages.en;
     
       // =========================
@@ -345,12 +358,7 @@
         didOpen: () => Swal.showLoading(),
       });
     
-      const SHEET_ENDPOINTS = {
-        en: "?sheet=en",
-        vi: "?sheet=vi",
-      };
-    
-      const sheetURL = SHEET_ENDPOINTS[lang] || SHEET_ENDPOINTS.en;
+      const sheetURL = "https://script.google.com/macros/s/AKfycbyCNDw-17UPpT7WCmm15Tx-qZbI6apIdVIQEVcXfcqcRtuO6a64WgIaqMLtB9XqybA-7A/exec?sheet=confirm";
     
       try {
         const res = await fetch(sheetURL, {
@@ -359,10 +367,12 @@
           body: new URLSearchParams({
             name,
             confirm,
+            gender,
             guest_number,
-            relation,
-            dietary,
-            wish,
+            guestText,
+            related,
+            vegetarian,
+            message,
           }),
         });
     
@@ -462,7 +472,7 @@
     
         const value = this.value;
     
-        if (!value || value === "Just me") return;
+        if (!value || value === "0") return;
     
         const number = parseInt(value);
     
@@ -501,11 +511,11 @@
       const form = document.forms["rsvpForm"];
       const formVi = document.forms["rsvpForm-vi"];
       if (form) {
-        form.addEventListener("submit", (e) => handleFormSubmit(e, 'en'));
+        form.addEventListener("submit", (e) => handleFormSubmit(e, "en"));
       }
-    
+
       if (formVi) {
-        formVi.addEventListener("submit", (e) => handleFormSubmit(e, 'vi'));
+        formVi.addEventListener("submit", (e) => handleFormSubmit(e, "vi"));
       }
     }
 
@@ -518,7 +528,7 @@
         initAnimations();
         initSwiper();
         initMusic();
-        initDresscodeAnimation();
+        // initDresscodeAnimation();
         initTimeline();
         initFAQ();
         initRSVP();
