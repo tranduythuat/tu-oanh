@@ -907,7 +907,7 @@ header {
   padding: 8% 18% 18%;
 }
 .rsvp .content .rsvp-form .header {
-  padding: 13% 0 10%;
+  padding: 18% 0 10%;
 }
 .rsvp .content .rsvp-form .header .title {
   font-family: "UVNKeChuyen3", sans-serif;
@@ -1104,10 +1104,10 @@ header {
   .rsvp .content .rsvp-form .form-group input[type=number],
   .rsvp .content .rsvp-form .form-group textarea,
   .rsvp .content .rsvp-form .form-group .form-select {
-    font-size: 2vw;
+    font-size: 2.4vw;
   }
   .rsvp .content .rsvp-form .form-group textarea#message {
-    font-size: 1.8vw;
+    font-size: 2vw;
   }
   .rsvp .content .rsvp-form .form-group .guest-info-title {
     font-size: 3vw;

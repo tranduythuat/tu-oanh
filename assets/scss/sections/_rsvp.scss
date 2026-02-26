@@ -17,7 +17,7 @@
             display: block;
             padding: 8% 18% 18%;
             .header {
-                padding: 13% 0 10%;
+                padding: 18% 0 10%;
                 .title {
                     font-family: $font-UVNKeChuyen3;
                     font-size: 30px;
@@ -262,11 +262,11 @@
                     input[type="number"],
                     textarea,
                     .form-select {
-                        font-size: calc((10 / 500) * 100vw);
+                        font-size: calc((12 / 500) * 100vw);
                     }
 
                     textarea#message {
-                        font-size: calc((9 / 500) * 100vw);
+                        font-size: calc((10 / 500) * 100vw);
                     }
 
                     .guest-info-title {
