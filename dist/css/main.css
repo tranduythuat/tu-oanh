@@ -615,6 +615,9 @@ header {
 .timeline .content .items #rings-icon {
   max-width: 40px;
 }
+.timeline .content .items #cups-icon {
+  max-width: 40px;
+}
 .timeline .content .items #mic-icon {
   max-width: 20px;
 }
@@ -637,7 +640,7 @@ header {
   .timeline .content .items .item .time {
     letter-spacing: 0.3vw;
   }
-  .timeline .content .items #rings-icon {
+  .timeline .content .items #rings-icon, .timeline .content .items #cups-icon {
     max-width: 8vw;
   }
   .timeline .content .items #mic-icon {
@@ -910,7 +913,7 @@ header {
 }
 .rsvp .content .rsvp-form {
   display: block;
-  padding: 8% 18% 18%;
+  padding: 8% 16% 18%;
 }
 .rsvp .content .rsvp-form .header {
   padding: 18% 0 10%;
@@ -1284,9 +1287,9 @@ header {
 }
 .letter-section .content .letter-img .open-letter {
   position: absolute;
-  left: 45%;
+  left: 43%;
   bottom: 13%;
-  font-size: 11.4px;
+  font-size: 14.4px;
   text-align: center;
 }
 .letter-section .content .info .date {
@@ -1301,7 +1304,7 @@ header {
     max-width: 88.6vw;
   }
   .letter-section .content .letter-img .open-letter {
-    font-size: 2.28vw;
+    font-size: 2.88vw;
   }
   .letter-section .content .info .date {
     font-size: 4.6vw;

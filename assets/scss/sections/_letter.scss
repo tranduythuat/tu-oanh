@@ -42,9 +42,9 @@
 
             .open-letter {
                 position: absolute;
-                left: 45%;
+                left: 43%;
                 bottom: 13%;
-                font-size: 11.4px;
+                font-size: 14.4px;
                 text-align: center;
             }
         }
@@ -69,7 +69,7 @@
                 }
 
                 .open-letter {
-                    font-size: calc((11.4 / 500) * 100vw);
+                    font-size: calc((14.4 / 500) * 100vw);
                 }
             }
 

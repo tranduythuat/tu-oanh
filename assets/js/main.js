@@ -328,7 +328,7 @@
           sendingText: "Vui lòng chờ trong giây lát",
           successTitle: "Thành công!",
           successText:
-            "Cảm ơn bạn đã xác nhận. Thông tin đã được chuyển đến cô dâu và chú rể rồi nha.",
+            "Cảm ơn quý cô chú, anh chị, và bạn bè đã xác nhận. Thông tin đã được chuyển đến cô dâu và chú rể rồi nha.",
           errorTitle: "Lỗi!",
           errorServer: "OPPS! Không tìm thấy server",
           errorRetry: "Thử lại",

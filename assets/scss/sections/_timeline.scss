@@ -60,6 +60,9 @@
             #rings-icon {
                 max-width: 40px;
             }
+            #cups-icon {
+                max-width: 40px;
+            }
             #mic-icon {
                 max-width: 20px;
             }
@@ -94,7 +97,7 @@
                         letter-spacing: calc((1.5 / 500) * 100vw);
                     }
                 }
-                #rings-icon {
+                #rings-icon,  #cups-icon  {
                     max-width: calc((40 / 500) * 100vw);
                 }
                 #mic-icon {
