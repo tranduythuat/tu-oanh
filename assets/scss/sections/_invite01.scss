@@ -44,7 +44,7 @@
         .divider {
             margin: 15% 0;
             img {
-                max-width: 81px;
+                max-width: 104px;
                 width: 100%;
                 height: auto;
             }
@@ -96,7 +96,7 @@
     
             .divider {
                 img {
-                    max-width: calc((81 / 500) * 100vw);
+                    max-width: calc((104 / 500) * 100vw);
                 }
             }
             .venue-name {
