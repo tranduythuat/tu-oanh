@@ -661,10 +661,6 @@ header {
   font-weight: 300;
   margin-top: 7%;
 }
-.dresscode .content .subtext {
-  font-size: 16px;
-  font-family: "ICIELBCOLDSTYLE", sans-serif;
-}
 .dresscode .content .colors-grid {
   display: flex;
   justify-content: center;
@@ -676,33 +672,39 @@ header {
   width: 33.33%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 .dresscode .content .colors-grid .item .color {
-  max-width: 44px;
+  max-width: 38px;
   width: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.119);
 }
 .dresscode .content .colors-grid .item .label {
-  font-size: 14px;
+  font-size: 10px;
   margin-top: 10%;
   font-family: "ICIELBCOLDSTYLE", sans-serif;
   text-transform: uppercase;
+  display: none;
+}
+.dresscode .content .subtext {
+  font-size: 14px;
+  font-family: "ICIELBCOLDSTYLE", sans-serif;
+  margin-top: 3%;
 }
 @media (max-width: 500px) {
   .dresscode .content h2 {
     font-size: 10vw;
   }
-  .dresscode .content .subtext {
-    font-size: 3.2vw;
-  }
   .dresscode .content .colors-grid .item .color {
-    max-width: 8.8vw;
+    max-width: 7.6vw;
   }
   .dresscode .content .colors-grid .item .label {
+    font-size: 2vw;
+  }
+  .dresscode .content .subtext {
     font-size: 2.8vw;
   }
 }

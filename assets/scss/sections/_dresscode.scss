@@ -14,10 +14,7 @@
             font-weight: 300;
             margin-top: 7%;
         }
-        .subtext {
-            font-size: 16px;
-            font-family: $font-ICIELBCOLDSTYLE;
-        }
+       
         .colors-grid {
             display: flex;
             justify-content: center;
@@ -29,23 +26,30 @@
                 width: 33.33%;
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
+                justify-content: start;
                 align-items: center;
                 .color {
-                    max-width: 44px;
+                    max-width: 38px;
                     width: 100%;
                     aspect-ratio: 1;
                     border-radius: 50%;
-                    border: 1px solid black;
+                    border: 1px solid rgba(0, 0, 0, 0.119);
                 }
 
                 .label {
-                    font-size: 14px;
+                    font-size: 10px;
                     margin-top: 10%;
                     font-family: $font-ICIELBCOLDSTYLE;
                     text-transform: uppercase;
+                    display: none;
                 }
             }
+        }
+
+        .subtext {
+            font-size: 14px;
+            font-family: $font-ICIELBCOLDSTYLE;
+            margin-top: 3%;
         }
     }
 
@@ -54,22 +58,23 @@
             h2 {
                 font-size: calc((50 / 500) * 100vw);
             }
-
-            .subtext {
-                font-size: calc((16 / 500) * 100vw);
-            }
-
+            
             .colors-grid {
                 .item {
                     .color {
-                        max-width: calc((44 / 500) * 100vw);
+                        max-width: calc((38 / 500) * 100vw);
                     }
     
                     .label {
-                        font-size: calc((14 / 500) * 100vw);
+                        font-size: calc((10 / 500) * 100vw);
                     }
                 }
             }
+
+            .subtext {
+                font-size: calc((14 / 500) * 100vw);
+            }
+
         }
     }
 }
