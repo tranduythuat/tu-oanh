@@ -5,7 +5,7 @@
     width: 100%;
     .content {
         width: 100%;
-        font-size: 14px;
+        font-size: 13px;
         font-family: $font-ICIELBCOLDSTYLE;
         padding-top: 9%;
         .box-logo {
@@ -79,7 +79,7 @@
 
     @media (max-width: 500px) {
         .content {
-            font-size: calc((14 / 500) * 100vw);
+            font-size: calc((13 / 500) * 100vw);
 
             .box-logo {
                 img.frame {

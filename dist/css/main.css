@@ -393,7 +393,7 @@ header {
 }
 .invite01 .content {
   width: 100%;
-  font-size: 14px;
+  font-size: 13px;
   font-family: "ICIELBCOLDSTYLE", sans-serif;
   padding-top: 9%;
 }
@@ -466,7 +466,7 @@ header {
 }
 @media (max-width: 500px) {
   .invite01 .content {
-    font-size: 2.8vw;
+    font-size: 2.6vw;
   }
   .invite01 .content .box-logo img.frame {
     max-width: 40vw;
